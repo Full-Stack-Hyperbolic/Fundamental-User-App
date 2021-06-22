@@ -3,7 +3,13 @@ import bodyParser from 'body-parser'
 import cors from 'cors'
 import mongoose from 'mongoose'
 
+import postRoutes from './routes/posts.js'
+
 const app = express();
+
+// Use express middleware to bring in our routes route using 'posts' prefix
+// Reachable on `localhost:5000/posts`
+app.use('/posts', postRoutes);
 
 app.use(express.json({ limit: '30mb', extended: true }));
 app.use(express.urlencoded({ extended: true}));
