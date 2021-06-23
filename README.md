@@ -57,3 +57,13 @@
 
 - Bring in Mongoose
 - Create a model Schema
+- Create a model from the schema and export
+
+### 13. Create createPost (post) route passing in logic from the controller
+
+- create the `router.post('/', createPost)` route and import along with getPosts
+- create the `createPost` logic within the controller and export
+
+### 14. Import PostMessage model from Project/server/models/postMessage.js into the posts controller to have access
+
+- Add try/catch blocks to callback function exports
