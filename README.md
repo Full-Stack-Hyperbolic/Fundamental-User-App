@@ -52,3 +52,8 @@
 - Create posts.js controller
 - Move logic from posts.js within route into posts.js in controller and export (getPosts) to posts.js routes for good house-keeping
 - (Routes in one js file with functional logic in the other)
+
+### 12. Create a new modal within a new model directory in Project/server for our posts
+
+- Bring in Mongoose
+- Create a model Schema
