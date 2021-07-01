@@ -30,6 +30,7 @@
 - react-file-base64
 - redux
 - redux-thunk (async actions using redux)
+- @material-ui/core
 
 ### 6. Delete Project/client/src directory to create fresh one including only:
 
@@ -66,4 +67,23 @@
 
 ### 14. Import PostMessage model from Project/server/models/postMessage.js into the posts controller to have access
 
-- Add try/catch blocks to callback function exports
+- Add try/catch blocks to functional callback exports within the controller
+
+### 15. Moving back to the front-end to be able to make post requests
+
+- Create the file heirarchy within the new Project/client/src/components directory
+- Includes Form & Posts/Post
+
+### 16. Import Material UI to app
+
+- create a new container within the App to contain / center everything
+- create an AppBar within the container
+- create a Typography within the AppBar
+- add an img below using images from a newly created images directory within src
+
+### 17. Create a new `images` directory within the Project/client/src
+
+- download the 'memories' image from JavaScript Mastery into the imagages directory
+- import the memories png into App.js
+
+### 18.
