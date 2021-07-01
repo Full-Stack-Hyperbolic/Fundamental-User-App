@@ -14,7 +14,9 @@ import App from './App';
 const store = createStore(reducers, compose(applyMiddleware(thunk)));
 
 ReactDom.render(
-  <Provider>
+  // Wrap the entire app in a provider to give access to the redux state
+  // pass the store state value through
+  <Provider store={store}>
     <App />
   </Provider>,
   document.getElementById('root')

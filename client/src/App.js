@@ -1,13 +1,25 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Container, AppBar, Typography, Grow, Grid } from '@material-ui/core';
-import useStyles from './styles';
+// import hook from react-redux to dispatch an action
+import { useDispatch } from 'react-redux';
 
+// import getPosts method from our actions
+import { getPosts } from './actions/posts';
 import Posts from './components/Posts/Posts';
 import Form from './components/Form/Form';
 import memories from './images/memories.png';
+import useStyles from './styles';
 
 const App = () => {
   const classes = useStyles();
+  // create new variable to custom redux hook useDispatch();
+  const dispatch = useDispatch();
+
+  // Dispatch an action within the useEffect (componentDidMount)
+  useEffect(() => {
+    // Dispatch getPosts() action to get all the posts
+    dispatch(getPosts());
+  }, []);
 
   return (
     <Container maxWidth='lg'>
