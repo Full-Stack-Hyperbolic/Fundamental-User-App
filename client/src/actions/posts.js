@@ -5,6 +5,7 @@ import * as api from '../api';
 // getPosts arrow function with another function for async (dispatch)
 export const getPosts = () => async dispatch => {
   try {
+    // First we're getting the response from the async fetchPost() call, which we then destructure out 'data' from
     const { data } = await api.fetchPosts();
 
     // dispatch the object with payload of 'data'

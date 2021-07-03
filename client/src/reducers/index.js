@@ -1,3 +1,4 @@
+// Combine all of the reducers in this app in here and export combined
 import { combineReducers } from 'redux';
 
 import posts from './posts';
