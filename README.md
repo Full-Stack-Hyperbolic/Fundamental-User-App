@@ -18,7 +18,13 @@
 
 ### 3. Import Project/server dependancies into server file
 
-- within `*project/server/index.js*`
+```JavaScript
+import express from 'express'
+import mongoose from 'mongoose'
+import cors from 'cors'
+```
+
+- within `*Project/server/index.js*`
 
 ### 4. Alter package.json
 
@@ -43,7 +49,17 @@
 
 - within `*Project/server/index*`
 
-### 8. Created database cluster on MongoDB & add CONNECTION_URL to server/index
+```JavaScript
+const app = express();
+app.use(bodyParser.json({ limit: '30mb', extended: true }));
+app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }));
+app.use(cors());
+```
+
+### 8. Create database cluster on MongoDB & add CONNECTION_URL to Project
+
+- within `*Project/server/index.js*`
+- NOTE\*\* - will add into env variables later
 
 ### 9. Add URL/PORT variables and connect Mongoose server to DB
 

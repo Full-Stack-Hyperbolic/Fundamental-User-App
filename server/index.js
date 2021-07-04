@@ -1,7 +1,7 @@
 import express from 'express';
-import bodyParser from 'body-parser';
 import cors from 'cors';
 import mongoose from 'mongoose';
+import {} from 'dotenv/config';
 
 import postRoutes from './routes/posts.js';
 
@@ -16,8 +16,7 @@ app.use(cors());
 // Use express middleware to bring in our routes route using 'posts' prefix
 app.use('/posts', postRoutes);
 
-const CONNECTION_URL =
-  'mongodb+srv://admin-Karsen:admin-Karsen1212@cluster0.2rxhx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+const CONNECTION_URL = process.env.MONGO_URL;
 const PORT = process.env.PORT || 5000;
 
 mongoose
