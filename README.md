@@ -18,6 +18,8 @@
 
 ### 3. Import Project/server dependancies into server file
 
+- within `*project/server/index.js*`
+
 ### 4. Alter package.json
 
 - Add `"type": "module",` under `"main": "index.js",` for importing express similarly to other imports
@@ -32,12 +34,14 @@
 - redux-thunk (async actions using redux)
 - @material-ui/core
 
-### 6. Delete Project/client/src directory to create fresh one including only:
+### 6. Delete Project/client/src directory to start fresh, including only:
 
 - index.js
 - App.js
 
-### 7. Setup basic express() app in Project/server/index
+### 7. Setup basic express() app
+
+- within `*Project/server/index*`
 
 ### 8. Created database cluster on MongoDB & add CONNECTION_URL to server/index
 
