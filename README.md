@@ -15,6 +15,7 @@
 - express (framework for creating the router)
 - mongoose (create database models)
 - nodemon (so we don't have to manually restart the server after making changes)
+- dotenv
 
 ### 3. Import Project/server dependancies into server file
 
@@ -22,6 +23,7 @@
 import express from 'express'
 import mongoose from 'mongoose'
 import cors from 'cors'
+import {} from 'dotenv/config'
 ```
 
 - within `*Project/server/index.js*`
@@ -63,10 +65,53 @@ app.use(cors());
 
 ### 9. Add URL/PORT variables and connect Mongoose server to DB
 
-### 10. Created routes directory within Project/server/routes to handle all routes concerning posts
+- within `*Project/server/index.js*`
 
-- import express from express
-- created router
+```JavaScript
+// using .env environmental variables to secure link
+const CONNECTION_URL = process.env.MONGO_URL;
+const PORT = process.env.PORT || 5000;
+
+mongoose.connect(CONNECTION_URL, { useNewUrLParser: true, useUnifiedTopology: true })
+    .then(() => {
+        app.listen(PORT, () => console.log(`Server running on port ${PORT}`)
+    })
+    .catch((error) => {
+        console.log(error.message)
+    });
+
+// Ensures no warnings in the console.
+mongoose.set('useFindAndModify', false);
+```
+
+### 10. Create 'routes' directory to handle all routes concerning posts
+
+- within `*Project/server/*`
+- Create `Posts.js` within `*Project/server/routes*`
+
+```JavaScript
+import express from 'express'
+
+const router = express.Router();
+```
+
+- Create routers within Posts.js
+
+```JavaScript
+router.get('/', (req, res) => {
+    // this is what happens when someone visits localhost:5000/
+    res.send('This works at the route /');
+})
+
+// Export the router
+export default router;
+```
+
+- import the `Post.js` routes into `*Project/server/index.js*`
+
+```JavaScript
+import
+```
 
 ### 11. Create a new directory in Project/server for controllers
 
