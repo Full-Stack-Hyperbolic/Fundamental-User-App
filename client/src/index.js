@@ -7,7 +7,7 @@ import thunk from 'redux-thunk';
 
 // import combined reducers from /reducers/index.js to createStore() with
 import reducers from './reducers';
-
+import './index.css';
 import App from './App';
 
 // Set up redux store state using the combined reducers from reducers/index.js
