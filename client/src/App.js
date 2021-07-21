@@ -33,6 +33,7 @@ const App = () => {
           src={memories}
           alt='memories'
           height='60'
+          style={{ marginLeft: '1.5rem' }}
         />
       </AppBar>
       <Grow in>
