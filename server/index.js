@@ -1,11 +1,12 @@
 import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
-import {} from 'dotenv/config';
+import dotenv from 'dotenv';
 
 import postRoutes from './routes/posts.js';
 
 const app = express();
+dotenv.config();
 
 // Apply our middleware before brining in our routes
 app.use(express.json({ limit: '30mb', extended: true }));
@@ -15,6 +16,10 @@ app.use(cors());
 // Reachable on `localhost:5000/posts`
 // Use express middleware to bring in our routes route using 'posts' prefix
 app.use('/posts', postRoutes);
+
+app.get('/', (req, res) => {
+  res.send('Hello from klh-memories API');
+});
 
 const CONNECTION_URL = process.env.MONGO_URL;
 const PORT = process.env.PORT || 5000;

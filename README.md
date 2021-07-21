@@ -2,6 +2,8 @@
 
 <!-- by Karsen Hansen: -->
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c3a97eab-8aee-40f4-85da-5d04ac5ebbe7/deploy-status)](https://app.netlify.com/sites/klh-memories/deploys)
+
 ### 1. Initial set-up
 
 - Project root directory created
