@@ -93,7 +93,9 @@ const Form = ({ currentId, setCurrentId }) => {
           fullWidth
           value={postData.tags}
           // Spread the postData before setting the tags: to e.target.value
-          onChange={e => setPostData({ ...postData, tags: e.target.value })}
+          onChange={e =>
+            setPostData({ ...postData, tags: e.target.value.split(',') })
+          }
         />
         <div className={classes.fileInput}>
           <FileBase
